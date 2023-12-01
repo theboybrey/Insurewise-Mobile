@@ -24,6 +24,10 @@ export default function RootLayout() {
     ...FontAwesome.font,
   });
 
+  const [fontsLoaded] = useFonts({
+    Raleway: require('../assets/fonts/Raleway-VariableFont_wght.ttf'),
+  })
+
   // Expo Router uses Error Boundaries to catch errors in the navigation tree.
   useEffect(() => {
     if (error) throw error;
